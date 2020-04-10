@@ -52,7 +52,9 @@ public class ChessClient {
                 // Save the working properties
                 properties.setProperty(ClientProperties.NICKNAME_KEY, nick);
                 properties.setProperty(ClientProperties.SERVER_ADDRESS_KEY, server);
-                properties.setProperty(ClientProperties.TOKEN_KEY, token.toString());
+                if (token != null) {
+                    properties.setProperty(ClientProperties.TOKEN_KEY, token.toString());
+                }
                 properties.save();
                 return true;
             } catch (Exception e) {
