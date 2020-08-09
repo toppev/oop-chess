@@ -17,7 +17,6 @@ public class ChessClient {
 
     public static void main(String[] args) {
         new ChessClient().start();
-        System.exit(0);
     }
 
     private void start() {
@@ -77,7 +76,7 @@ public class ChessClient {
         // Should be used to update UI
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new ChessGameUI(this, game, properties.getProperty(ClientProperties.NICKNAME_KEY), color);
-            frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+            frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
             frame.pack();
             // Maybe fix later
             // Don't allow resizing for now
