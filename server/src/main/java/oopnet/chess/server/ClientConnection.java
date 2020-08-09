@@ -79,7 +79,7 @@ public class ClientConnection implements Runnable {
                     // Default to white as (by default) white starts unless Game#getCurrentPlayer is black
                     gameContext.setWhiteToken(token);
                 }
-                sendEvent(new ChatEvent("Server", "The game identifier is " + gameContext.getGameIdentifier()));
+                sendEvent(new ChatEvent("Server", "The game ID is " + gameContext.getGameIdentifier()));
                 logger.info("A new game has been created. Identifier: " + gameContext.getGameIdentifier());
             } else if (event instanceof GameJoinEvent) {
                 handleGameJoin(((GameJoinEvent) event));

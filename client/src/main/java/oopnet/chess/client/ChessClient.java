@@ -17,6 +17,7 @@ public class ChessClient {
 
     public static void main(String[] args) {
         new ChessClient().start();
+        System.exit(0);
     }
 
     private void start() {
